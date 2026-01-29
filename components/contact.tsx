@@ -1,21 +1,38 @@
 'use client';
 
 import Link from 'next/link';
+import Image, { type StaticImageData } from 'next/image';
 import { motion } from "framer-motion";
 import {
   Github,
   Linkedin,
+  LucideIcon,
   Mail,
-  X as XIcon,
 } from "lucide-react";
+import { X as XImage } from '@/public';
+
+type Social =
+  | {
+    icon: LucideIcon;
+    href: string;
+    label: string;
+    isImage: false;
+  }
+  | {
+    icon: StaticImageData;
+    href: string;
+    label: string;
+    isImage: true;
+  };
 
 
-const socials = [
-  { icon: Github, href: "https://github.com/peternnadi1999", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/nnadi-peter-emeka-a002371a9", label: "LinkedIn" },
-  { icon: XIcon, href: "https://x.com/PeterNnadi7", label: "X" },
-  { icon: Mail, href: "mailto:peternnadi1999@gmail.com", label: "Email" },
+const socials: Social[] = [
+  { icon: Github, href: "https://github.com/peternnadi1999", label: "GitHub", isImage: false },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/nnadi-peter-emeka-a002371a9", label: "LinkedIn", isImage: false },
+  { icon: XImage, href: "https://x.com/PeterNnadi7", label: "X", isImage: true },
+  { icon: Mail, href: "mailto:peternnadi1999@gmail.com", label: "Email", isImage: false },
 ];
+
 
 export default function Contact() {
   return (
@@ -32,7 +49,7 @@ export default function Contact() {
 
         <div className="pt-6">
           <div className="flex border border-border rounded-3xl shadow-lg py-6 flex-wrap justify-center gap-6 bg-card">
-            {socials.map(({ icon: Icon, href, label }) => (
+            {socials.map(({ icon: Icon, href, label, isImage }) => (
               <motion.div
                 key={label}
                 whileHover={{ y: -6 }}
@@ -60,15 +77,25 @@ export default function Contact() {
       dark:hover:border-accent
     "
                 >
-                  <Icon
-                    size={24}
-                    className="
+                  {isImage ? (
+                    <Image
+                      src={Icon as StaticImageData}
+                      alt={label}
+                      width={24}
+                      height={24}
+                      className="text-foreground transition-colors duration-300 group-hover:text-accent-foreground"
+                    />
+                  ) : (
+                    <Icon
+                      size={24}
+                      className="
         text-foreground
         transition-colors
         duration-300
         group-hover:text-accent-foreground
       "
-                  />
+                    />
+                  )}
                 </Link>
 
                 {/* Tooltip */}

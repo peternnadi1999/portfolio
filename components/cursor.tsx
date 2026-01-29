@@ -47,12 +47,12 @@ export default function Cursor() {
       {/* Main cursor */}
       <div
         ref={cursorRef}
-        className="pointer-events-none fixed z-50 w-3 h-3 rounded-full -translate-x-1/2 -translate-y-1/2 bg-[var(--accent)] dark:bg-[var(--accent)] shadow-lg dark:shadow-lg dark:shadow-accent/50"
+        className="pointer-events-none fixed z-50 w-3 h-3 rounded-full -translate-x-1/2 -translate-y-1/2 bg-accent dark:bg-accent shadow-lg dark:shadow-lg dark:shadow-accent/50"
       />
       {/* Follower/halo effect */}
       <div
         ref={followerRef}
-        className="pointer-events-none fixed z-40 w-8 h-8 border-2 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-60 border-[var(--accent)] dark:border-[var(--accent)] dark:opacity-70"
+        className="pointer-events-none fixed z-40 w-8 h-8 border-2 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-60 border-accent dark:border-accent dark:opacity-70"
       />
     </>
   );

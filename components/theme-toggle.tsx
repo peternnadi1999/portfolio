@@ -1,6 +1,6 @@
 'use client';
 
-import { Eye, Sun } from 'lucide-react';
+import { Eye, Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
@@ -42,7 +42,7 @@ export default function ThemeToggle() {
       {isDark ? (
         <Sun className='w-5 h-5' />
       ) : (
-        <Eye className='w-5 h-5' />
+        <Moon className='w-5 h-5' />
       )}
     </button>
   );

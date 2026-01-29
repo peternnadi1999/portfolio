@@ -2,6 +2,7 @@ import React from "react"
 import type { Metadata } from 'next'
 import { Allura, Red_Hat_Display, Red_Hat_Text } from 'next/font/google'
 import './globals.css'
+import ClientLayout from "@/components/ClientLayout";
 
 
 const redHatDisplay = Red_Hat_Display({ subsets: ["latin"], variable: '--font-display' });
@@ -43,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${redHatDisplay.variable} ${redHatText.variable} ${allura.variable}`}>
       <body className={`font-sans antialiased`}>
-        {children}
+         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   )

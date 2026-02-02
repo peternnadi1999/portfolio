@@ -26,14 +26,14 @@ export default function Experience() {
     {
       id: 4,
       title: 'Open Source Contributor | OnlyDust',
-      period: '2024 - Present',
+      period: '2024 - 2025',
       description:
         'Contributed to open-source Web3 projects by fixing bugs, optimizing performance, and building frontend components for decentralized applications. Collaborated with global blockchain developers and contributed to DAO-driven projects.',
     },
     {
       id: 5,
       title: 'Frontend Developer | VetKonect',
-      period: '2024 - Present',
+      period: '2025 - 2026',
       description:
         'Building and maintaining responsive web applications using Next.js, TailwindCSS, and modern React patterns. Implemented authentication flows, dashboard interfaces, and API integrations for real-time veterinary and logistics data. Optimized performance and improved UI/UX consistency across devices. Collaborated with backend developers and product designers to deliver scalable features and maintain clean code architecture.',
     },
@@ -50,7 +50,7 @@ export default function Experience() {
       id: 2,
       title: "Bachelor's Degree in Computer Science",
       institution: 'University of Nigeria, Nsukka',
-      period: 'June 2021 - Present',
+      period: 'June 2021 - March 2024',
     },
   ];
 

@@ -4,8 +4,19 @@ import { motion } from 'framer-motion';
 
 export default function Projects() {
   const projects = [
-    {
+   {
       id: 1,
+      title: 'GokaFood',
+      description:
+        'A fast, reliable food delivery platform connecting users with local restaurants across Nigeria. Built with a mobile-first, responsive UI and seamless authentication flows.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+      projectType: 'Professional Project',
+      liveLink: 'https://gokafood.com',
+      githubLink: '',
+      highlight: true,
+    },
+    {
+      id: 2,
       title: 'ETH Enugu',
       description:
         'A blockchain and cryptocurrency platform designed to promote Ethereum adoption in Enugu. Built with modern web technologies to provide a seamless user experience for cryptocurrency enthusiasts and developers.',
@@ -16,7 +27,7 @@ export default function Projects() {
       highlight: true,
     },
     {
-      id: 2,
+      id: 3,
       title: 'Vetkonect',
       description:
         'A professional veterinary services platform connecting pet owners with qualified veterinarians. Features appointment booking, medical records management, and consultation services.',
@@ -26,7 +37,7 @@ export default function Projects() {
       githubLink: '',
     },
     {
-      id: 3,
+      id: 4,
       title: 'Audioblocks',
       description:
         'A digital audio marketplace and streaming platform for discovering and sharing audio content, optimized for performance across all devices.',
@@ -36,7 +47,7 @@ export default function Projects() {
       githubLink: '',
     },
     {
-      id: 4,
+      id: 5,
       title: 'Grandilo Technology Platform',
       description:
         'A corporate and service platform built for Grandilo Technology to showcase services, manage client interactions, and deliver responsive user interfaces. Focused on performance optimization, clean UI architecture, and seamless API integrations for dynamic content delivery.',
